@@ -15,11 +15,20 @@ namespace Versioning.Controllers
         {
             _service = service;
         }
-        
+
         [HttpPut]
-        public bool Put(Update update)
+        public Response Put(Update update)
         {
-            return _service.Update(update.OldFile, update.NewFile);
+            try
+            {
+                bool result = _service.Update(update.OldFile, update.NewFile);
+
+                return new Response { Success = result, Message = "Ok" };
+            }
+            catch (Exception ex)
+            {
+                return new Response { Success = false, Message = ex.Message };                
+            }
         }
 
         [HttpPost]
