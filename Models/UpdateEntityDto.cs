@@ -1,11 +1,11 @@
-﻿namespace Versioning
+﻿namespace Versioning.Models
 {
     public class UpdateEntityDto
     {
         public int? Field_1 { get; set; }
         public int? Field_2 { get; set; }
 
-        public static explicit operator Entity (UpdateEntityDto dto)
+        public static explicit operator Entity(UpdateEntityDto dto)
         {
             return new Entity
             {

@@ -1,4 +1,4 @@
-﻿namespace Versioning
+﻿namespace Versioning.Models
 {
     public class Entity
     {

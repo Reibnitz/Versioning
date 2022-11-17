@@ -1,4 +1,6 @@
-﻿namespace Versioning
+﻿using Versioning.Models;
+
+namespace Versioning
 {
     public interface IDatabase
     {
